@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+<table>
+<thread>
+<tr>
+<th>Item</th>
+<th>Volume</th>
+<th>Bought</th>
+<th>Sold</th>
+<th>Stack size</th>
+<th>Price per stack</th>
+<th>Price per unit</th>
+</tr>
+</thread>
+<tbody>

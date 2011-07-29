@@ -1,0 +1,7 @@
+<tr>
+<td colspan="7">Calculated in: %time ms</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

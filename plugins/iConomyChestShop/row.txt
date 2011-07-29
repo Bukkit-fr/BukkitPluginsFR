@@ -1,0 +1,9 @@
+<tr>
+<td>%material</td>
+<td>%total</td>
+<td>%bought</td>
+<td>%sold</td>
+<td>%maxStackSize</td>
+<td>%pricePerStack</td>
+<td>%pricePerItem</td>
+</tr>
