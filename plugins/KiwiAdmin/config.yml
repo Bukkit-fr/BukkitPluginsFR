@@ -1,0 +1,24 @@
+mysql: false
+mysql-database: 'jdbc:mysql://localhost:3306/minecraft'
+mysql-user: 'root'
+mysql-password: 'root'
+mysql-table: banlist
+mysql-table-ip: banlistip
+auto-complete: true
+
+messages:
+    banMsgFailed: "&cLe joueur &e%victim% &cest deja bannis!"
+    unbanMsg: "&aLe joueur &e%victim%&a a ete debanni!"
+    unbanMsgGlobal: "&e%victim% &6a ete debanni par &e%player%&6!"
+    unbanMsgFailed: "&cErreur dans le deban de &e%victim%&c!"
+    kickAllMsg: "%player% a kicke tout le monde. Raison: %reason%"
+    kickMsgVictim: "Vous avez ete kicke par %player%. Raison: %reason%"
+    kickMsgBroadcast: "&e%victim% &6a ete kicke par &e%player%&6. Raison: &e%reason%"
+    kickMsgFailed: "&cErreur dans le kick: &6%victim% &cn'est pas en ligne."
+    banMsgVictim: "Vous avez ete banni par %player%. Raison: %reason%"
+    banMsgBroadcast: "&e%victim% &6a ete banni par &e%player%&6. Raison: &e%reason%"
+    tempbanMsgVictim: "Vous avez ete banni temporairement par %player%. Raison: %reason%"
+    tempbanMsgBroadcast: "&e%victim% &6a ete banni temporairement par &e%player%&6. Raison: &e%reason%"
+    LoginTempban: "&cVous avez ete banni jusqu'au &e%time%&c! Raison: &e%reason%"
+    LoginBan: "&cVous avez ete banni de ce Serveur! Raison: &e%reason%"
+    LoginIPBan: "&cVotre adresse IP a ete banni!"
