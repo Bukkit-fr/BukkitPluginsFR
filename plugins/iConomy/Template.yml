@@ -1,0 +1,141 @@
+﻿##
+# Messaging Template
+##
+# Variables
+#   These are denoted by the + signs before them;
+#   Not every line contains the same variables. 
+#   To prevent any errors or issues, we have included every variable for each line.
+##
+# Colors
+#   Previously you would use a utf-8 character to use colors, this has been replaced
+#   to make your lives easier, there are 3 different methods of adding color to your lines
+#   each orchestrated for a different personality type.
+#
+#   Whichever is easiest for you to remember; They all do the same, and you can mix and match.
+#
+#   Methods: &[code] or `[name-code] or the easier alternative InEquality Signed color brackets: <color>
+#
+#   Color Mapping:
+#     &c `c Color     &c `c Color
+#     -- -- -----     -- -- -----
+#     &0 `k black     &f `w white
+#     &1 `B navy      &a `g lime
+#     &2 `G green     &b `a aqua
+#     &3 `A teal      &c `r rose
+#     &4 `R red       &d `p pink
+#     &5 `P purple    &e `y yellow
+#     &6 `Y gold
+#     &7 `s silver
+#     &8 `S gray
+#     &9 `b blue
+#
+#     For black would be: <black> or `k or &0
+#     Example using Inequality: <green>Hi I'm green! <white>Now White!?
+#     Example using &: &2Hi I'm green! &fNow White!?
+#     Example using `: `GHi I'm green! `wNow White!?
+#     Example using all: `GI'm Green, &fWhite, <yellow>and Yellow!
+##
+# Additional Tag for Interest Announcement
+#   +bank,+b = Shows bank name
+##
+
+tag:
+    money: "<green>[<white>Monnaie<green>] "
+    bank: "<green>[<white>Banque<green>] "
+
+banks:
+    create: "<green>Créer une banque <white>+name<green>."
+    remove: "<rose>Supprimer une banque <white>+name<rose>."
+    purge:
+        bank: "<rose>Banque <white>+name<rose> a été purgé pour comptes inactifs."
+        all: "<rose>Toutes les banques ont été purgés pour comptes inactifs."
+    set: "<green>Changez <white>+key<green> on <white>+bank <green> à <white>+value<green>."
+
+personal:
+    balance: "<green>Solde: <white>+balance"
+    reset: "<rose>Votre compte a été réinitialisé."
+    rank: "<green>Classement actuel: <white>+rank"
+    set: "<green>Votre solde a été modifié pour <white>+amount"
+    debit: "<rose>Votre compte a été débité de : <white>+amount"
+    credit: "<white>+amount<green> a été crédité sur votre compte."
+    bank:
+        balance: "<green>Solde de +bank : <white>+balance"
+        charge: "<green>Vous payez <white>+amount<green> Pour le compte."
+        sent: "<green>Vous envoyez <white>+amount<green> à <white>+bank<green> pour <white>+name<green>."
+        deposit: "<green>Vous déposez<white>+amount<green> à <white>+bank<green>."
+        withdraw: "<green>Vous avez retiré <white>+amount<green> de <white>+bank<green>."
+        transfer: "<green>Transféré <white>+amount<green> de <white>+bank<green> à <white>+bankAlt<green>."
+        between: "<green>Transféré <white>+amount<green> de <white>+bank<green> à <white>+name<green> pour <white>+bankAlt<green>."
+        change: "<green>Changemet de banque principale pour <white>+bank<green>."
+        recieved: "<green>Votre compte <white>+bank<green> a été crédité de : <white>+amount"
+
+player:
+    balance: "<green>Solde de +name <white>+balance"
+    rank: "<green>Classement de +name <white>+rank"
+    reset: "<rose>Le compte de <white>+name <rose>à été réinitialisé"
+    set: "<green>La solde de <white>+name <green>a été changé de : <white>+amount"
+    credit: "<green>Le compte de <white>+name <green>a été crédité de : <white>+amount."
+    debit: "<rose>Le compte de <white>+name <rose>a été débité de : <white>+amount"
+    bank:
+        balance: "<green>Solde de +name chez +bank : <white>+balance"
+        recieved: "<green>Le compte de <white>+name<green>a été crédité de : <white>+amount"
+
+payment:
+    self: "<rose>Désolé, vous ne pouvez pas envoyer d'argent à vous-même."
+    to: "<green>Vous avez envoyé <white>+amount<green> à <white>+name<green>."
+    from: "<white>+name<green> vous a envoyé <white>+amount<green>."
+
+statistics:
+    opening: "<green>-----[ <white>iConomy Stats <green>]-----"
+    total: "<gray>Total +currency: <white>+amount"
+    average: "<gray>Moyenne +currency: <white>+amount"
+    accounts: "<gray>Total Comptes: <white>+amount"
+    bank:
+        accounts: "<gray>Total Compte en banque: <white>+amount"
+
+list:
+    banks:
+        opening: "<green>Page #<white>+amount<green> à <white>+total<green> pages (<white>F: Frais<green>, <white>I: détention initiale<green>)"
+        empty: "<white>   Aucune banque n'héxiste."
+        all-entry: "<green> +name [F: <white>+fee<green>] [I: <white>+initial<green>] [<white>+major<green>/<white>+minor<green>]"
+        fee-major-entry: "<green> +name [F: <white>+fee<green>] [I: <white>+initial<green>] [<white>+major<green>]"
+        major-entry: "<green> +name [I: <white>+initial<green>] [<white>+major<green>]"
+        entry: "<green> +name [I: <white>+initial<green>] [<white>+major<green>/<white>+minor<green>]"
+
+interest:
+    annonce: "+amount <green>acquise dans l'intérêt."
+    announcement: "+amount <green>interest gained."
+
+accounts:
+    empty: "<rose>Suppression de <white>tout<rose> les comptes."
+    purge: "<rose>Tous les comptes inactifs ont été purgés."
+    create: "<green>Compte créé avec le nom : <white>+name<green>."
+    remove: "<green>Compte supprimé : <white>+name<green>."
+    remove-total: "<green>Entièrement supprimé : <white>+name<green>."
+    status: "<green>État de compte : <white>+status<green>."
+    bank:
+        create: "<green>Compte créé pour <white>+name<green> chez <white>+bank<green>."
+        remove: "<green>Compte supprimé de <white>+name<green> chez <white>+bank<green>."
+
+top:
+    opening: "<green>Top <white>+amount<green> des joueurs les plus riches:"
+    empty: "<white>   Personne encore!"
+    line: "<white>   +i.<green> +name <white>(<green>+balance<white>)"
+
+error:
+    online: "<rose>Désolé, personne d'autre est en ligne."
+    exists: "<rose>Compte déjà existant."
+    account: "<rose>Le joueur <white>+name<rose> n'a pas de compte."
+    funds: "<rose>Désolé, vous n'avez pas assez de fonds."
+    bank:
+        fee: "<rose>Désolé, vous n'avez pas assez de fonds pour payer les frais de banques"
+        exists: "<rose>Désolé, cette banque existe déjà."
+        doesnt: "<rose>Désolé la banque <white>+name <rose>n'éxiste pas."
+        couldnt: "<rose>Désolé la banque <white>+name <rose>n'a pas pu être crée."
+        account:
+            funds: "<rose>Désolé, vous n'avez pas les fonds nécéssaire pour payer les frais de banque."
+            maxed: "<rose>Désolé, vous avez déjà un compte bancaire."
+            none: "<rose>Désolé, pas de comptes trouvés."
+            doesnt: "<rose>Désolé, aucun compte nommé <white>+name<rose> existe."
+            exists: "<rose>Désolé, ce compte existe déjà chez nous."
+            failed: "<rose>Désolé, création de compte échoué. Essayez à nouveau ..."
